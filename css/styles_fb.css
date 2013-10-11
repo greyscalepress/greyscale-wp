@@ -1,0 +1,28 @@
+/*
+styles for facebook box...
+*/
+
+/*
+info:
+http://wiki.developers.facebook.com/index.php/Fb:fan
+
+http://wiki.developers.facebook.com/index.php/Fan_Box
+
+You can modify the Fan Box's colors and fonts, but you cannot delete, obscure or modify:
+
+    * Your Page title and icon
+    * The Become a Fan button
+    * The order of the elements (button, stream, fans)
+    
+    Note: To provide you with better performance, we cache your stylesheet. If you update your stylesheet, you should use a cachebreaker in the URL to the stylesheet, typically by appending a version number to the .CSS file extension, as in http://www.example.com/my.css?2. 
+
+*/
+
+body {width:300px;height:166px;border:0;}
+
+div.app_content_312507100202, /* = ID */
+div.fan_box,
+div.full_widget {width:300px;height:166px;border:0;background:#fff;}
+
+div.name_block span.name {color:#000;}
+div.name_block a {color:#000;}
