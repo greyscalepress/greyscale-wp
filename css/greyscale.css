@@ -1,6 +1,7 @@
 /* @override 
 	http://greyscalepress.com/wp-content/themes/greyscale/css/greyscale-130208.min.css
-	http://greyscalepress.com/wp-content/themes/greyscale/css/greyscale-130226.min.css */
+	http://greyscalepress.com/wp-content/themes/greyscale/css/greyscale-130226.min.css
+	http://greyscalepress.com/wp-content/themes/greyscale/css/greyscale-130609.min.css */
 
 
 /* @group RESET */
@@ -425,8 +426,15 @@ div#menu ul li:hover,
 	width:260px;}
 #home-right h1 {font-size:1.3em;}
 #home-right h2 {font-size:0.8em;padding:0;margin:0 0 5px 0;}
+
 #home-right h2 span.date {font-weight:normal;font-size:1em;text-transform:capitalize;}
-#home-right div.format_text {font-size:0.9em;margin:0 0 15px 0;}
+
+#home-right div.format_text {
+	font-size:0.9em;
+	margin:0 0 15px 0;
+	padding-left: 0.5em;
+	line-height: 1.4;
+}
 
 #home-left {
 	position:relative;

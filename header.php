@@ -53,7 +53,7 @@
 	<link rel="icon" type="image/gif" href="http://ofo.greyscalepress.com/wp-content/themes/greyscale/images/favicon.gif" />
 	<link rel="shortcut icon" href="http://ofo.greyscalepress.com/wp-content/themes/greyscale/images/favicon.ico"/>
 
-	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/greyscale-130609.min.css" type="text/css" />
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/greyscale-131012.min.css" type="text/css" />
 	
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
