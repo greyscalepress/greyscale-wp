@@ -16,7 +16,7 @@
 				global $nfo_unix_now; // = YYYY-mm-dd
 				
 				
-				$nfo_date_expiration =   ( 2 * 30 * 24 * 60 * 60 ); // 2 jours
+				$nfo_date_expiration =   ( 2 * DAY_IN_SECONDS ); // 2 jours
 				
 				$nfo_unix_limit = ( $nfo_unix_now - $nfo_date_expiration );
 
@@ -89,7 +89,7 @@
 								?>
 								<h2 <?php post_class() ?> >
 													
-													<a href="<?php the_permalink() ?>" rel="bookmark"><span class="date"><?php the_time('j M y') ?>:</span> <?php the_title(); ?></a></h2>
+													<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 													<?php if (in_category('archives')) {
 														echo"<span class=\"date bold\">Date: ";
 														the_time('F jS, Y');
