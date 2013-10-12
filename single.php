@@ -23,6 +23,7 @@ if (in_category( 'news' )) { echo "news"; } ; ?>">
 				$proj_googlebooks = get_post_meta($post->ID, 'GoogleBooks', true);
 				$proj_weread = get_post_meta($post->ID, 'weRead', true);
 				$proj_issn = get_post_meta($post->ID, 'ISSN', true);
+				$proj_isbn = get_post_meta($post->ID, 'ISBN', true);
 				$proj_pubdate = get_post_meta($post->ID, 'PubDate', true);
 				$proj_lulu = get_post_meta($post->ID, 'Lulu', true);
 				$proj_readme = get_post_meta($post->ID, 'ReadmeCC', true);
