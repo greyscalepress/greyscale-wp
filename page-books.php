@@ -9,7 +9,7 @@ Template Name: books
 			<div id="content" class="content list">
 			<div id="content-books" class="list content-books">
 <?php 		//The Query
-				query_posts('category_name=books&numberposts=-1&orderby=date');
+				query_posts('category_name=books&numberposts=-1&orderby=date&posts_per_page=-1');
 				
 			// note: limited to 10 by WP internal functions...
 				
