@@ -1,6 +1,6 @@
-<div id="book-text" class="format_text">
+<div id="book-text" class="format_text" itemscope itemtype="http://schema.org/Book">
 	
-	<h2 <?php post_class() ?> ><?php the_title(); ?></h2>
+	<h2 <?php post_class() ?> itemprop="name"><?php the_title(); ?></h2>
 			
 		<?php // Author
 				if($proj_author !== '') { ?>
@@ -9,7 +9,7 @@
 				
 		<?php // Author-Link
 				if($proj_authlink !== '') { ?>
-				<a href="<?php 
+				<a itemprop="author" href="<?php 
 				echo $proj_authlink; ?>"><?php 
 				echo $proj_author; ?></a></p>
 			<?php } elseif($proj_author !== '') { ?>
@@ -17,16 +17,22 @@
 				echo $proj_author; ?></p>
 		<?php } ?>
 			
+		<?php // Date
+				if($proj_pubdate !== '') { ?>
+				<p itemprop="datePublished"><?php 
+				echo $proj_pubdate; ?></p>
+		<?php } ?>
+		
 		<?php // ISSN nr
 				if($proj_issn !== '') { ?>
-				<p class="issn">ISSN: <?php 
+				<p class="issn">ISSN <?php 
 				echo $proj_issn; ?></p>
 		<?php } ?>
 		
-		<?php // Date
-				if($proj_pubdate !== '') { ?>
-				<p><?php 
-				echo $proj_pubdate; ?></p>
+		<?php // ISBN nr
+				if($proj_isbn !== '') { ?>
+				<p class="isbn">ISBN <span itemprop="isbn"><?php 
+				echo $proj_isbn; ?></span></p>
 		<?php } ?>
 		
 			<?php the_content('[Read more &rarr;]'); ?>
@@ -60,7 +66,7 @@
 	<?php bxw_get_mediumimg($post->ID); ?><img src="<?php bloginfo('stylesheet_directory'); ?>/images/cover_dummy.png" />
 </div>
 
-<div id="book-meta">
+<div id="book-meta" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 				<?php // OPTIONAL META-TAG SECTION
 				
 				if( $proj_price !== '') {
@@ -74,10 +80,10 @@
 				if( $show_meta == 'true') { ?>
 				<ul class='post-meta'>
 				<?php /*check if there is a price*/ if($proj_price !== '') { ?>
-				<li><strong>Price: </strong><?php echo $proj_price; ?></li>
+				<li><strong>Price: </strong><span itemprop="price"><?php echo $proj_price; ?></span></li>
 				<?php } ?>
 				<?php /*check if there is a format*/ if($proj_format !== '') { ?>
-				<li><strong>Format: </strong><?php echo $proj_format; ?></li>
+				<li><strong>Format: </strong><span><?php echo $proj_format; ?></span></li>
 				<?php } ?>
 				</ul>
 			<?php } // end if statement
@@ -93,8 +99,8 @@
 			
 			<?php // LULU LINK
 			if($proj_lulu !== '') { ?>
-			&rarr; this item on <a href="http://www.lulu.com/content/<?php 
-			echo $proj_lulu; ?>" target="_blank" class="lulu">Lulu.com</a><br/>
+			<span>&rarr; this item on <a href="http://www.lulu.com/content/<?php 
+			echo $proj_lulu; ?>" target="_blank" class="lulu">Lulu.com</a></span><br/>
 			<?php } ?>
 			
 			<?php // OpenLibrary LINK
