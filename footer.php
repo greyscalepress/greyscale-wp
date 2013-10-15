@@ -9,7 +9,7 @@
 				<li class="page_item page-item-115"><a href="http://greyscalepress.com/about/">About</a></li>
 				<li class="page_item page-item-17"><a rel="author" href="http://greyscalepress.com/contact/">Contact</a></li>
 				<li class="page_item page-item-58"><a href="http://greyscalepress.com/newsletter/">Newsletter</a></li>
-				<li><a href="http://www.lulu.com/spotlight/greyscalepress" target="_blank">Online Store</a></li>
+				<li class="page_item page-item-904"><a href="http://greyscalepress.com/workshops/">Workshops</a></li>
 			</ul>
 		
 		<?php get_search_form(); ?>
