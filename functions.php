@@ -7,7 +7,7 @@ if ( function_exists( 'add_image_size' ) ) {
 
 
 function new_excerpt_length($length) {
-	return 10; //number of words 
+	return 20; //number of words 
 	}
 add_filter('excerpt_length', 'new_excerpt_length'); 
 

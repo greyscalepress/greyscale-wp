@@ -37,16 +37,25 @@
 	} ?></title>
 	<?php // ** DESCRIPTION v.0.1 **
 	if (is_single() || is_page() ) : if ( have_posts() ) : while ( have_posts() ) : the_post(); 
-	?><meta name="description" content="<?php the_excerpt_rss(); ?>" />
+	?><meta name="description" content="<?php 
+				$descr = get_the_excerpt();
+		  	$text = str_replace( "\r\n", ', ', trim($descr) ); 
+		  	echo esc_attr($text); 
+	?>" />
 	<?php endwhile; endif; elseif(is_home()) : 
 	?><meta name="description" content="Greyscale Press is an experiment in online publishing. 72 DPI, Open-Source, Creative Commons, Web2Print, Print-on-Demand." />
 	<?php endif; ?>
-<?php // ** SEO OPTIMIZATION v.0.1 **
-	if(is_single() || is_page() || is_home()) { 
-	?><meta name="robots" content="all,index,follow" />
-	<?php } elseif (is_category() || is_archive()) { 
-	?><meta name="robots" content="noindex,follow" />
-	<?php }?>
+	
+	
+	
+	<?php // ** SEO OPTIMIZATION v.0.2 **
+	if ( is_attachment() ) {
+	?><meta name="robots" content="noindex,follow" /><?php
+	} else if( is_single() || is_page() || is_home() ) { 
+	?><meta name="robots" content="all,index,follow" /><?php 
+	} elseif ( is_category() || is_archive() ) { 
+	?><meta name="robots" content="noindex,follow" /><?php } 
+	?>
 	
 	<meta name="google-site-verification" content="9PweehBrYdFFv3Ogt53qzJTVH4Y2Yib84eux8alAIQE" />	
 	<link rel="icon" type="image/vnd.microsoft.icon" href="http://ooo.greyscalepress.com/wp-content/themes/greyscale/images/favicon.ico" />
