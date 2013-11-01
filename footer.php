@@ -28,20 +28,8 @@
 
 <?php wp_footer(); ?>
 
-<!-- scripts concatenated and minified via ant build script-->
 <script src="http://ooo.greyscalepress.com/wp-content/themes/greyscale/js/mylibs/jquery.colorbox.min.js"></script>
 <script src="http://oof.greyscalepress.com/wp-content/themes/greyscale/js/mylibs/scripts.130226.js"></script>
-<!-- end scripts-->
-
-<!-- Google Analytics  -->
-
-<?php //google analytics ?>
-        <script>
-            var _gaq=[['_setAccount','UA-25416029-1'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
 
 </body>
 </html>
