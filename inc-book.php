@@ -52,11 +52,11 @@
 					<div class="fb-like" data-href="<?php echo $proj_FB_href; ?>" data-send="false" data-width="340" data-show-faces="true"></div>
 			<?php
 			
-					 } else { // output the old code ?>
-			<div id="like-button">
-			<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="<?php echo get_permalink(); ?>" width="340" font="lucida grande"></fb:like>
-			</div>
-			<?php } ?>
+					 } else { // output the old code 
+					 
+					 // protect user privacy  - either do nothing, or use double click method from Golem.de
+					 
+					  } ?>
 			
 			<!--<p>Categories: <?php the_category(', '); ?></p>-->
 			<!--<p><?php the_tags('<strong>Keywords:</strong> ',', ',''); ?></p>-->

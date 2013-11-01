@@ -27,8 +27,9 @@
 					// *****************
 						$args = array( 
 			//'category_name' => 'books',
-			'category_name' => 'copypaste,icty,other,zkp,aether-series',
-			'numberposts' => 3,
+			'category_name' => 'copypaste,icty,other,zkp,aether-series,free-speech',
+//			'category__not_in' => array( 29 ),
+			'numberposts' => 6,
 			'orderby' => 'date',
 			// 'exclude' => $currentID,
 						);
@@ -63,6 +64,4 @@
 						<?php endforeach; ?>
 			</div><!--#right_authors-->
 			
-			<div id="right-facebook" class="right-facebook">
-				<iframe scrolling="no" frameborder="0" src="http://www.facebook.com/connect/connect.php?id=312507100202&connections=5&stream=0&css=<?php bloginfo('stylesheet_directory'); ?>/styles_fb.css?13" allowtransparency="true" style="border: none; width: 300px; height: 166px;"></iframe>
-			</div>
+			

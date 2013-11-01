@@ -142,34 +142,42 @@
 						
 						$args = array( 
 						//'category_name' => 'books',
-						'category_name' => 'copypaste,icty,other,zkp,aether-series',
-						'numberposts' => 3,
+						'category_name' => 'copypaste,icty,other,zkp,aether-series,free-speech',
+						'numberposts' => 6,
 						'orderby' => 'date',
 									);
 									
 						$postslist = get_posts( $args );
+						$evenodd = 'odd';
 						
 						foreach ($postslist as $post) : 
 						setup_postdata($post)
 						?>
-						<div class="home_book">
-						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php bxw_get_mediumimg($post->ID); ?><img src="<?php bloginfo('stylesheet_directory'); ?>/images/cover_dummy.png" /></a>
-						</div>
-						<div class="home_book_txt">
-						<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-						by <?php $key="Author"; echo get_post_meta($post->ID, $key, true); ?><br/><br/>
-						<?php $key="Format"; echo get_post_meta($post->ID, $key, true); ?>
-						</div>
+							<div class="home_book<?php 
+							
+							echo ' book_'.$evenodd;
+							
+							// invert even-odd:
+							if ( $evenodd == "odd" ) {
+							  $evenodd = "even";
+							} else {
+							  $evenodd = "odd";
+							}
+							 ?>">
+							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php bxw_get_mediumimg($post->ID); ?><img src="<?php bloginfo('stylesheet_directory'); ?>/images/cover_dummy.png" /></a>
+							</div>
+							<div class="home_book_txt">
+							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+							by <?php $key="Author"; echo get_post_meta($post->ID, $key, true); ?><br/><br/>
+							<?php $key="Format"; echo get_post_meta($post->ID, $key, true); ?>
+							</div>
+
 						<?php endforeach; ?>
 				</div><!--#right_books-->
 			</div><!--#home-right-->
 		</div><!--#left_box-->
 		
-		<div id="right_box" class="home right_box">
-			<div id="facebox_home" class="facebox_home">
-			<iframe scrolling="no" frameborder="0" src="http://www.facebook.com/connect/connect.php?id=312507100202&connections=10&stream=1&css=<?php bloginfo('stylesheet_directory'); ?>/styles_fb_home.css?7" allowtransparency="true" style="border: none; width: 290px; height: 547px;"></iframe>
-			</div>
-		</div><!--#right_box-->
+		
 	</div><!--#content_box-->
 
 <?php get_footer(); ?>
