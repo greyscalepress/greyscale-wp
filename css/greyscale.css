@@ -2,7 +2,8 @@
 	http://greyscalepress.com/wp-content/themes/greyscale/css/greyscale-130208.min.css
 	http://greyscalepress.com/wp-content/themes/greyscale/css/greyscale-130226.min.css
 	http://greyscalepress.com/wp-content/themes/greyscale/css/greyscale-130609.min.css
-	http://greyscalepress.com/wp-content/themes/greyscale/css/greyscale-131012.min.css */
+	http://greyscalepress.com/wp-content/themes/greyscale/css/greyscale-131012.min.css
+	http://greyscalepress.com/wp-content/themes/greyscale/css/greyscale.min-20131101.css */
 
 
 /* @group RESET */
@@ -143,6 +144,10 @@ a.more-link {
 	margin: 0.5em 0 0.5em 0;
 }
 
+.category-interviews .format_text blockquote {
+	background: #fff;
+}
+
 
 /* ---- HEADER ---- */
 
@@ -268,6 +273,8 @@ div#menu ul li:hover,
 
 #content img {
 	display: block;
+	max-width: 100%;
+	height: auto;
 }
 
 #content img.alignleft {
@@ -393,7 +400,7 @@ div#menu ul li:hover,
 	margin-top: 25px;
 	clear: left;
 	
-	font-size: 80%;
+/*	font-size: 80%;*/
 /*	font-family: DejaVuSans, "DejaVu Sans", DejaVuSansWeb, "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;*/
 /*	font-family: 'Varela', DejaVuSans, "DejaVu Sans", "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;*/
 }
@@ -533,7 +540,7 @@ div#facebox_home {position:relative;width:290px;height:547px;
 .next-prev {
 	font-size: 80%;
 /*	background: #f2f2f2;*/
-	padding: 6px 10px;
+	padding: 6px 0px 6px 0px;
 /*	border: 1px solid #aaa;*/
 	float: left;
 }
@@ -834,6 +841,14 @@ div.auth-rel div.related-book-item:hover p.title a {
 	/*text-decoration: underline;*/
 	background: #ddd;
 	border-bottom: 1px dashed #222;
+}
+
+/* @end */
+
+/* @group Archive Page */
+
+.archive h2 {
+	clear: left;
 }
 
 /* @end */
