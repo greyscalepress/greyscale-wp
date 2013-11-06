@@ -5,6 +5,18 @@ if ( function_exists( 'add_image_size' ) ) {
 	add_image_size( 'thumb-squared', 120, 120, true ); //(cropped)
 }
 
+function custom_widgets_init() {
+
+	register_sidebar( array(
+		'name' => 'Sidebar',
+		'id' => 'widget_area_sidebar',
+		'before_widget' => '<div id="%1$s" class="widget-bloc %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="h2 widget-title">',
+		'after_title' => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'custom_widgets_init' );
 
 function new_excerpt_length($length) {
 	return 20; //number of words 
