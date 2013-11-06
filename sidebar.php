@@ -63,5 +63,12 @@
 						</div>
 						<?php endforeach; ?>
 			</div><!--#right_authors-->
+			<div class="sidebar-widgets">
+			<?php 
+			
+			if ( dynamic_sidebar('widget_area_sidebar') ) : else : endif; 
+			
+			?>
+			</div>
 			
 			
