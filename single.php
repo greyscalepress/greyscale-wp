@@ -39,7 +39,7 @@ if (in_category( 'news' )) { echo "news"; } ; ?>">
 						elseif (in_category( 'authors' )) {
 						include( TEMPLATEPATH . '/inc-author.php' );
 					}
- 	  					else { 
+ 	  				else { 
  	  					include( TEMPLATEPATH . '/inc-article.php' );
 					}
 				; ?> 	
