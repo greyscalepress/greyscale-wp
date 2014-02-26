@@ -2,7 +2,25 @@
 /**
  * greyscale theme
  */
- get_header(); ?>
+ get_header();
+ 
+ // custom styling for some pages...
+ 
+ if (is_single( '1944' ) ) {
+ 
+ 		?>
+ 		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/fonts/Lobster/stylesheet.css" type="text/css" />
+ 		<style>
+ 		.lobsterize {
+ 			font-family: lobster, sans-serif;
+ 		}
+ 		</style>
+ 		<?
+ }
+ 
+ 
+ 
+  ?>
 
 	<div id="content_box" class="single">	
 		<div id="left_box" class="single">
