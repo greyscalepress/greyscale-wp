@@ -4,8 +4,8 @@
  */
  get_header(); ?>
 
-	<div id="content_box" class="index">	
-		<div id="left_box" class="index">
+	<div id="content_box" class="index content_box">	
+		<div id="left_box" class="index left_box">
 			<div id="content" class="content index">
 <?php 		if (have_posts()) : ?>
 		

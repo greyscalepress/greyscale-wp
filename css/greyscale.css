@@ -3,7 +3,8 @@
 	http://greyscalepress.com/wp-content/themes/greyscale/css/greyscale-130226.min.css
 	http://greyscalepress.com/wp-content/themes/greyscale/css/greyscale-130609.min.css
 	http://greyscalepress.com/wp-content/themes/greyscale/css/greyscale-131012.min.css
-	http://greyscalepress.com/wp-content/themes/greyscale/css/greyscale.min-20131101.css */
+	http://greyscalepress.com/wp-content/themes/greyscale/css/greyscale.min-20131101.css
+	http://greyscalepress.com/wp-content/themes/greyscale/css/greyscale.min-20131106b.css */
 
 
 /* @group RESET */
@@ -384,12 +385,16 @@ div#menu ul li:hover,
 	}
 
 .intro,
-.intro p {
+.intro p,
+#content_box .intro p {
 	font-size: 100%;
 /*	font-family: 'Varela', DejaVuSans, "DejaVu Sans", "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;*/
 /*	font-family: DejaVuSans, "DejaVu Sans", DejaVuSansWeb, "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;*/
 	/*letter-spacing: 1px;*/
 	line-height: 1.4em;
+}
+#content_box .intro p:last-of-type {
+	margin-bottom: 0.2em;
 }
 
 .outro {

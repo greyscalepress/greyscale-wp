@@ -4,9 +4,9 @@
  */
  get_header(); ?>
 
-	<div id="content_box" class="home">	
-		<div id="left_box" class="home">
-			<div id="home-right" class="home">
+	<div id="content_box" class="home content_box">	
+		<div id="left_box" class="home left_box">
+			<div id="home-right" class="home home-right">
 			
 <?php 		//The Query
 
