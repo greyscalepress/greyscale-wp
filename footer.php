@@ -1,6 +1,6 @@
 <div id="footer" class="footer">
 		<div class="right">
-		copyright &copy; 1904-2012 Greyscale Press.
+		copyright &copy; 1904-<?php date("Y"); ?> Greyscale Press.
 		</div>
 		
 		<div class="left">
