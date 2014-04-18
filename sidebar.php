@@ -1,6 +1,10 @@
 <div id="right_news" class="right_news">
-
-			<h2><a href="<?php bloginfo('wpurl'); ?>/newsfeed/">Greyscale Newsfeed</a></h2>
+			<?php 
+			
+			if ( dynamic_sidebar('widget_area_sidebar_top') ) : else : endif; 
+			
+			?>
+			<h2><a href="<?php bloginfo('wpurl'); ?>/newsfeed/">Recent Articles</a></h2>
 					<ul class="newsfeed txt">
 						<?php 
 					// *****************

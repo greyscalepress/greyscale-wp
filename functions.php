@@ -6,9 +6,18 @@ if ( function_exists( 'add_image_size' ) ) {
 }
 
 function custom_widgets_init() {
-
+	
 	register_sidebar( array(
-		'name' => 'Sidebar',
+		'name' => 'Top Sidebar',
+		'id' => 'widget_area_sidebar_top',
+		'before_widget' => '<div id="%1$s" class="widget-bloc %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="h2 widget-title">',
+		'after_title' => '</h2>',
+	) );
+	
+	register_sidebar( array(
+		'name' => 'Lower Sidebar',
 		'id' => 'widget_area_sidebar',
 		'before_widget' => '<div id="%1$s" class="widget-bloc %2$s">',
 		'after_widget' => '</div>',
