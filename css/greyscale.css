@@ -940,6 +940,14 @@ div.auth-rel div.related-book-item:hover p.title a {
 
 /* @end */
 
+/* @group Media Player */
+
+.mejs-container {
+	margin-bottom: 1em;
+}
+
+/* @end */
+
 /* @group Sidebar */
 
 /***************
